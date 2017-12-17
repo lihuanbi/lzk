@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+	var a=0;
+	var t;
+$(document).ready(function(){
+		t=setTimeout(dCount,0);
+		setTimeout("javascript:location.href='indexx.html'", 11100); 
+});
+function dCount()
+	{
+		if(a%5==0)
+		{document.getElementById('count').innerHTML = a + "%";}
+		if(a==100)
+		{
+			$(".loading").fadeOut(1000);
+			return true;
+		}
+		a=a+1;
+		t=setTimeout("dCount()",100);
+	}
+</script>
+		<style>
+			* {  
+        padding: 0;  
+        margin: 0;  
+    }
+    body{
+    	background-color: #99CCFF;
+    }
+    @font-face { 
+  								font-family: Broadway; 
+  								src: url( css/Broadway.ttf); 
+} 
+    .loading{
+    	width: 200px;
+    	height: 180px;
+    	position: absolute;
+    	top: 0;bottom: 0;left: 50%;
+    	margin: auto;
+    	margin-left: -100px;
+    }
+    .point{
+    	width: 100%;
+    	margin-left: 35px;
+    	margin-top: 22px;
+    }
+    .pointt{
+    	padding-left: 11px;
+    }
+    #count{
+    	font-family: Broadway;
+    	font-size: 30px;
+    	text-align: center;
+    	color: white;
+    	margin-top: 18px;
+    }
+    .no1{
+    	animation: no11 1s ;
+    	animation-delay: 2.03s;
+    }
+    .no2{
+    	animation: no22 1s ;
+    	animation-delay: 4.03s;
+    }
+    .no3{
+    	animation: no33 1s ;
+    	animation-delay: 6.03s;
+    }
+    .no4{
+    	animation: no44 1s ;
+    	animation-delay: 8.03s;
+    }
+    .no5{
+    	animation: no55 1s ;
+    	animation-delay: 10.03s;
+    }
+        @keyframes no11{
+    	0%{transform: scale(2);}
+    	100%{transform: scale(1);}
+    }
+    @keyframes no22{
+    	0%{transform: scale(2);}
+    	100%{transform: scale(1);}
+    }
+    @keyframes no33{
+    	0%{transform: scale(2);}
+    	100%{transform: scale(1);}
+    }
+    @keyframes no44{
+    	0%{transform: scale(2);}
+    	100%{transform: scale(1);}
+    }
+    @keyframes no55{
+    	0%{transform: scale(2);}
+    	100%{transform: scale(1);}
+    }
+		</style>
+	</head>
+	<body>
+		<div class="loading">
+		<div class="sangongmen">
+			<img src="img/sgm.png" />
+		</div>
+		<div class="point">
+			<img src="img/loading.png" class="no1"/ >
+			<img src="img/loading.png" class="pointt no2"/>
+			<img src="img/loading.png" class="pointt no3"/>
+			<img src="img/loading.png" class="pointt no4"/>
+			<img src="img/loading.png" class="pointt no5"/>
+		</div>
+		<div id="count">
+			
+		</div>
+		</div>
+	</body>
+</html>
